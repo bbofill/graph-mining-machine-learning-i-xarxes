@@ -36,7 +36,7 @@ Rediseño completo enfocado a minería de grafos y evaluación de ranking:
 * `src/visualization/`: Exportación a PyVis (HTML interactivo), Gephi (.gexf) y proyecciones t-SNE.
 * `results/`: Carpeta de salida automática para tablas de métricas, trazas y gráficas.
 
-* | Modelo | NDCG@10 (±IC 95%) | Precision@10 | Recall@10 |
+| Modelo | NDCG@10 (±IC 95%) | Precision@10 | Recall@10 |
 | :--- | :---: | :---: | :---: |
 | **Popularidad (Baseline)** | `0.0486 ±0.0128` | `0.0441` | `0.0269` |
 | **Colaborativo (USER-KNN, k=30)** | `0.0045 ±0.0025` | `0.0047` | `0.0053` |
