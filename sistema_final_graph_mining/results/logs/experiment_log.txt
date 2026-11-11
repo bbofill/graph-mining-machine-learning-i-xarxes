@@ -1,0 +1,24 @@
+[2026-10-24 18:43:25] [INFO] Semilla aleatoria fijada en: 42
+[2026-10-24 18:43:25] [INFO] MovieLens 1M cargado: 1000209 filas leídas.
+[2026-10-24 18:43:25] [INFO] Resumen Dataset (ml-1m): 6040 usuarios, 3416 películas, 999611 valoraciones (Rango: [1.0, 5.0], Géneros: 18).
+[2026-10-24 18:43:26] [INFO] Split Temporal (80/19) completado: Train = 797275 valoraciones | Test = 202336 valoraciones.
+[2026-10-24 18:43:27] [INFO] Colaborativo (USER-KNN, k=30) inicializado sobre matriz (6040, 3416).
+[2026-10-24 18:44:07] [INFO] Matrix Factorization (SVD/SGD, d=40) entrenado con 797275 interacciones (12 épocas).
+[2026-10-24 18:46:15] [INFO] LightGCN (GNN 3-Layers, d=32) entrenado mediante BPR Loss (20 épocas).
+[2026-10-24 18:46:15] [INFO] Evaluado [Popularidad (Baseline)] (297 usuarios) -> NDCG@10: 0.0486 (±0.0128) | Precision@10: 0.0441 | Recall@10: 0.0269
+[2026-10-24 18:46:17] [INFO] Evaluado [Colaborativo (USER-KNN, k=30)] (297 usuarios) -> NDCG@10: 0.0045 (±0.0025) | Precision@10: 0.0047 | Recall@10: 0.0053
+[2026-10-24 18:46:17] [INFO] Evaluado [Matrix Factorization (SVD/SGD, d=40)] (297 usuarios) -> NDCG@10: 0.0681 (±0.0168) | Precision@10: 0.0606 | Recall@10: 0.0355
+[2026-10-24 18:46:31] [INFO] Evaluado [Graph RWR / Personalized PageRank (User-Movie [RQ1])] (297 usuarios) -> NDCG@10: 0.1082 (±0.0175) | Precision@10: 0.0859 | Recall@10: 0.0612
+[2026-10-24 18:46:46] [INFO] Evaluado [Graph RWR / Personalized PageRank (User-Movie-Genre [RQ2])] (297 usuarios) -> NDCG@10: 0.1082 (±0.0204) | Precision@10: 0.0859 | Recall@10: 0.0612
+[2026-10-24 18:46:46] [INFO] Evaluado [LightGCN (GNN 3-Layers, d=32)] (297 usuarios) -> NDCG@10: 0.1049 (±0.0196) | Precision@10: 0.0838 | Recall@10: 0.0588
+[2026-10-24 18:46:46] [INFO] Métricas exportadas en: results/logs/metricas_experimento.csv y results/logs/tabla_resultados.md
+[2026-10-24 18:46:47] [INFO] Grafo NetworkX [User-Movie-Genre] construido: 9474 nodos, 469008 aristas User-Movie, 5831 aristas Movie-Genre.
+[2026-10-24 18:46:47] [INFO] Gráfico del subgrafo guardado en: results/plots/grafo_estructura_movielens.png
+[2026-10-24 18:46:47] [INFO] Grafo NetworkX [User-Movie-Genre] construido: 9474 nodos, 469008 aristas User-Movie, 5831 aristas Movie-Genre.
+[2026-10-24 18:46:48] [INFO] Grafo interactivo HTML generado en: results/graphs/grafo_interactivo_movielens.html
+[2026-10-24 18:46:48] [INFO] Grafo NetworkX [User-Movie-Genre] construido: 9474 nodos, 469008 aristas User-Movie, 5831 aristas Movie-Genre.
+[2026-10-24 18:46:52] [INFO] Archivo GEXF para Gephi exportado en: results/graphs/movielens_graph.gexf
+[2026-10-24 18:46:52] [WARNING] El modelo LightGCN no contiene embeddings entrenados para t-SNE.
+[2026-10-24 18:46:52] [INFO] Gráfico comparativo de modelos guardado en: results/plots/comparativa_modelos_rq1_rq2.png
+[2026-10-24 18:46:53] [INFO] Grafo NetworkX [User-Movie-Genre] construido: 9474 nodos, 469008 aristas User-Movie, 5831 aristas Movie-Genre.
+[2026-10-24 18:46:53] [INFO] Subgrafo explicativo guardado en: results/plots/grafo_explicacion.png
